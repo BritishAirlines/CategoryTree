@@ -4,6 +4,7 @@ Python 3.8
 Django 3.1.3
 djangorestframework 3.12.2
 ```
+##### !All requirements are specified in requirements.txt file
 # How to SetUp
 1. pip install -r requirements
 2. python manage.py makemigrations
