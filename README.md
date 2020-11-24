@@ -16,7 +16,8 @@ djangorestframework 3.12.2
 2. ```GET /api/categories/<id>/ API endpoint. Endpoint should retrieve category name, parents (and their parents), children and siblings (see examples) by primary key (<id>) in json format.```
 #Example API Calls
 1. POST http://127.0.0.1:8000/api/categories/
-``` {
+``` 
+{
   "name": "Category 1",
   "children": [
     {
