@@ -2,7 +2,6 @@ from rest_framework import serializers
 from .models import Category
 from .utils import get_edges, validate_tree
 
-
 class StrictCharField(serializers.CharField):
     def to_internal_value(self, value):
         if isinstance(value, str):
@@ -25,7 +24,7 @@ class NestedCategorySerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         unique_set = set()
-        validate_tree(data,  unique_set)
+        validate_tree(data, unique_set)
         return data
 
     def create(self, validated_data):
@@ -34,7 +33,6 @@ class NestedCategorySerializer(serializers.ModelSerializer):
 
 
 class CategoryPartialSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Category
         fields = ('id', 'name')
